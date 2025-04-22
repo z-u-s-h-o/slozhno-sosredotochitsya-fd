@@ -1,5 +1,113 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  color: var(--text-color, rgb(241 178 206 /1));
+  font-family: var(--main-font, sans-serif);
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.title {
+  color: var(--title-color, rgb(219 0 255 / 1));
+  font-weight: bold;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 0.83;
+}
+
+.title-decor {
+  color: var(--accent-inversion-color, rgb(0 0 40 / 1));
+  font-weight: bold;
+  background-color: var(--accent-color, rgb(255 0 112 / 1));
+}
+
+/* HEADER BLOCK */
+
+.header {
+  position: relative;
+  display: grid;
+  padding-inline: 10px;
+  background-image: url(../images/cover-image-dark.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+
+.header__record-icon {
+  position: absolute;
+  top: 10px;
+  right: 19px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent-color, rgb(255 0 112 / 1));
+  line-height: 1.39;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-inline-end: 1px solid var(--accent-color, rgb(255 0 112 / 1));
+  border-block-start: 1px solid var(--accent-color, rgb(255 0 112 / 1));
+  inline-size: 25.04px;
+  block-size: 25px;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  border-inline-start: 1px solid var(--accent-color, rgb(255 0 112 / 1));
+  border-block-end: 1px solid var(--accent-color, rgb(255 0 112 / 1));
+  inline-size: 25.04px;
+  block-size: 25px;
+}
+
+.header__record-icon::after {
+  content: '';
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px var(--accent-color, rgb(255 0 112 / 1));
+  background-color: var(--accent-color, rgb(255 0 112 / 1));
+  inline-size: 0.5em;
+  block-size: 0.5em;
+}
+
+.header__theme-menu {
+  justify-items: end;
+  margin-block-start: 75px;
+  color: var(--accent-color, rgb(255 0 112 / 1));
+  line-height: 1;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  inline-size: 70px;
+}
+
+.header__theme-menu-button {
+  margin-block-start: 2px; /*для выравнивания текста, некорректное ->*/
+  margin-block-end: 6px; /* -> позиционирование при заданных параметрах текста*/
+  inline-size: 100%;
+}
+
+.header__theme-menu-item:has(.header__theme-menu-button_active) {
+  outline: var(--accent-color, rgb(255 0 112 / 1)) solid 1px;
+}
+
+.header__title {
+  margin-block-start: 65px;
+  margin-block-end: 55px;
+  text-shadow: 4px 4px 0px var(--accent-color, rgb(255 0 112 / 1));
+}
+
+.header__description-text {
+  margin-block-end: 66px;
+}
+
+.footer__title {
+  text-shadow: 2px 2px 0px var(--accent-color, rgb(255 0 112 / 1));
 }
