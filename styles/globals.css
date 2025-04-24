@@ -20,12 +20,17 @@ h5,
 h6,
 p {
   margin: 0;
+  font-size: inherit;
 }
 
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+ol {
+  padding-inline-start: 0;
 }
 
 picture {
@@ -43,4 +48,8 @@ a {
   border: none;
   padding-block: 0;
   padding-inline: 0;
+}
+
+a {
+  text-decoration: none;
 }
