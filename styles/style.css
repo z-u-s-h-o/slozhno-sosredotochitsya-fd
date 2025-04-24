@@ -25,33 +25,41 @@
   background-color: var(--accent-color, rgb(255 0 112 / 1));
 }
 
+.decorated-element {
+  border-inline: 1px solid var(--accent-color, rgb(255 0 112 / 1));
+  border-block: 1px solid var(--accent-color, rgb(255 0 112 / 1));
+  inline-size: 25.04px;
+  block-size: 25px;
+}
+
+.decorated-element_type_top_right {
+  border-block-end: none;
+  border-inline-start: none;
+  justify-self: end;
+  align-self: start;
+}
+
+.decorated-element_type_bottom_left {
+  border-block-start: none;
+  border-inline-end: none;
+  align-self: end;
+  grid-row: 3;
+}
+
 /* HEADER BLOCK */
 
 .header {
   position: relative;
   display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  block-size: 100vh;
+  align-items: stretch;
+  padding-block: 10px;
 }
 
-.header::before {
-  content: '';
-  position: absolute;
-  top: 10px;
-  right: 0;
-  border-inline-end: 1px solid var(--accent-color, rgb(255 0 112 / 1));
-  border-block-start: 1px solid var(--accent-color, rgb(255 0 112 / 1));
-  inline-size: 25.04px;
-  block-size: 25px;
-}
-
-.header::after {
-  content: '';
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  border-inline-start: 1px solid var(--accent-color, rgb(255 0 112 / 1));
-  border-block-end: 1px solid var(--accent-color, rgb(255 0 112 / 1));
-  inline-size: 25.04px;
-  block-size: 25px;
+.header-area {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
 }
 
 .header__record-icon {
@@ -76,7 +84,6 @@
 
 .header__theme-menu {
   justify-items: end;
-  margin-block-start: 75px;
   color: var(--accent-color, rgb(255 0 112 / 1));
   line-height: 1;
 }
@@ -112,13 +119,12 @@
 }
 
 .header__title {
-  margin-block-start: 65px;
-  margin-block-end: 55px;
   text-shadow: 4px 4px 0px var(--accent-color, rgb(255 0 112 / 1));
+  align-self: center;
 }
 
 .header__description-text {
-  margin-block-end: 66px;
+  grid-row: 2;
 }
 
 /* CONTENT BLOCK*/
@@ -185,6 +191,10 @@
 }
 
 /* FOOTER BLOCK*/
+
+.footer {
+  block-size: 100vh;
+}
 
 .footer__title {
   text-shadow: 2px 2px 0px var(--accent-color, rgb(255 0 112 / 1));

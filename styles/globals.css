@@ -29,9 +29,9 @@ ul {
   list-style: none;
 }
 
-ol {
+/* ol {
   padding-inline-start: 0;
-}
+} */
 
 picture {
   margin: 0;
