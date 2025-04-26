@@ -12,4 +12,11 @@
   --accent-inversion-color: rgb(0 0 40 / 1);
   --title-color: rgb(219 0 255 / 1);
   --bg-image: url(../images/cover-image-dark.png);
+  --basic-indentation: 10px;
+  --basic-section-indentation: 20px;
+  --basic-main-external-indentation: 40px;
+  --basic-main-internal-indentation: 50px;
+  
+
+
 }
