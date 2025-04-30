@@ -4,10 +4,14 @@
   --main-font-size: 18px;
   --text-color: rgb(241 178 206 / 1);
   --accent-color: rgb(255 0 112 / 1);
-  --accent-translucent-color: rgb(255 0 112 / 0.4);
+  --theme-menu-translucent-color: rgb(255 0 112 / 0.4);
   --title-color: rgb(219 0 255 / 1);
+  --content-title-color: var(--accent-color);
   --bg-image: url(../images/cover-image-dark.png);
   --bg-color: rgb(0 0 40 / 1);
+  --title-decor-color: var(--bg-color);
+  --theme-menu-color: var(--accent-color);
+  --corners-color: var(--accent-color);
   --min-screen-height: 668px;
   --basic-indentation: 10px;
   --basic-section-indentation: 20px;
