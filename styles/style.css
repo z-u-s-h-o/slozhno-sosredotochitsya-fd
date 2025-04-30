@@ -1,4 +1,5 @@
 .page {
+  padding-inline: var(--basic-indentation, 10px);
   font-family: var(--main-font, sans-serif);
   font-weight: normal;
   font-size: var(--main-font-size, 18px);
@@ -9,7 +10,6 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  padding-inline: var(--basic-indentation, 10px);
 }
 
 .title {
@@ -27,9 +27,9 @@
 
 .header, .footer {
   position: relative;
+  padding-block: var(--basic-indentation, 10px);
   min-block-size: var(--min-screen-height, 668px);
   max-block-size: 100vh;
-  padding-block: var(--basic-indentation, 10px);
 }
 
 /* decorative corners */
@@ -88,9 +88,9 @@
 
 .header__theme-menu {
   justify-items: end;
+  align-self: center;
   color: var(--theme-menu-color, rgb(255 0 112 / 1));
   line-height: 1;
-  align-self: center;
 }
 
 .header__theme-menu-list {
@@ -101,9 +101,9 @@
 }
 
 .header__theme-menu-item {
-  min-inline-size: 70px;
-  padding-block-start: 2px; /*для выравнивания текста, некорректное поменять на внутренние ->*/
+  padding-block-start: 2px; /*для выравнивания текста, некорректное ->*/
   padding-block-end: 6px; /* -> позиционирование при заданных параметрах текста*/
+  min-inline-size: 70px;
 }
 
 .header__theme-menu-button {
@@ -189,8 +189,8 @@
 }
 
 .card-points__title {
-  font-weight: normal;
   margin-block-end: 10px;
+  font-weight: normal;
 }
 
 .galary__image-list {
@@ -199,9 +199,9 @@
 }
 
 .galary__image {
+  display: block;
   width: 100%;
   height: 100%;
-  display: block;
   object-fit: cover;
 }
 
@@ -236,25 +236,25 @@
   }
 
   .header__description-text {
-    width: 50%;
     justify-self: end;
+    width: 50%;
   }
 
   .content {
     grid-template-columns: 1fr 2fr;
   }
 
-  .content:nth-child(odd) .content__article-list{
+  .content:nth-child(odd) .content__article-list {
     grid-column: 2 / -1;
   }
 
-  .content:nth-child(even) .content__article-list{
+  .content:nth-child(even) .content__article-list {
     grid-column: 1 / -1;
   }
 
   .galary__image-item:nth-child(1) {
-    grid-row: 1 ;
     grid-column: 1 / span 2;
+    grid-row: 1 ;
   }
 
   .galary__image-item:nth-child(2) {
@@ -292,7 +292,7 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .content:nth-child(even) .content__article-list{
+  .content:nth-child(even) .content__article-list {
     grid-template-columns: repeat(3, 1fr);
   }
 }
