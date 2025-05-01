@@ -222,11 +222,11 @@
 }
 
 .galary__image {
-  display: block; 
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
-  object-position: center; 
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* FOOTER BLOCK*/
@@ -286,7 +286,7 @@
 
   .galary__image-item:nth-child(1) {
     grid-column: 1 / span 2;
-    grid-row: 1 ;
+    grid-row: 1;
   }
 
   .galary__image-item:nth-child(2) {
