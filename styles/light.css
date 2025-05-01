@@ -26,6 +26,7 @@
     --bg-color: rgb(255 241 247 / 1);
     --title-decor-color: var(--text-color);
     --theme-menu-color: var(--text-color);
+    --corners-color: var(--text-color);
   }
 
   .header__record-icon {
